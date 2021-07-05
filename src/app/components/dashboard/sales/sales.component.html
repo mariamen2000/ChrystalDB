@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="body">
+        <div class="sales">
+            <div class="row justify-content-evenly">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
+                        <div class="card-body">
+                            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
+                                [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
+                        <div class="card-body">
+                            <canvas baseChart [data]="pieChartData" [colors]="colors" [labels]="pieChartLabels"
+                                [options]="pieChartOptions" [chartType]="pieChartType">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
+                        <div class="card-body">
+                            <canvas baseChart [data]="gaugeChartData" [colors]="gaugecolors"
+                                [options]="gaugeChartOptions" [chartType]="gaugeChartType"></canvas>
+                        </div>
+                        <div class="gauge__text"> 50%</div>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="mt-4 col-12">
+                        <div class="card">
+                            <h5 class="card-header">Daily Orders</h5>
+                            <div class="card-body">
+                                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+                                    [options]="lineChartOptions" [legend]="lineChartLegend" [colors]="lineChartColors"
+                                    [chartType]="lineChartType">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="flex-container">
+
+  <!-- Navbar-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow p-md-3">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a class="navbar-brand" href="#">Chrystal DashBoard</a>
+
+    <!--navbar expand button it should not be shown when in full page-->
+    <button class="navbar-toggler" type="button" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!--move to left-->
+      <div class="mx-auto"></div>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <mat-sidenav-container class="sidenav-container">
+    <!-- Sidebar-->
+    <mat-sidenav #snav>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/sales">Sales</a>
+        <a mat-list-item routerLink="/finance">Finance</a>
+        <a mat-list-item routerLink="/customers">Customer</a>
+        <a mat-list-item routerLink="/inventory">Inventory</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <!--End Sidebar-->
+
+    <!--Main Content-->
+    <mat-sidenav-content>
+      <!-- Spinner-->
+      <app-spinner></app-spinner>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <!--End Main Content-->
+
+  </mat-sidenav-container>
+</div>
+
+<!--https://www.youtube.com/watch?v=QPZrQ_xPVs4&t=243s-->
+<!--https://codepen.io/djdabe/pen/qXgJNV-->

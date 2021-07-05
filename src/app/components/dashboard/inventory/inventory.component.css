@@ -1,0 +1,9 @@
+.body{
+    display: flex;
+    height: 100vh;
+}
+
+.inventory{
+    padding-top: 80px;
+    width: 100%;
+}

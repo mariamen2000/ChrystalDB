@@ -1,0 +1,26 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.register{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+
+.len{
+    width: 100%;
+}
+
+.hei{
+    height: 50px
+}
+
+.bg-image {
+    background-image: url('../../../assets/img/braden-collum-xSod-wFnZ4s-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+}

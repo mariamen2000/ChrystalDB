@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <div class="col-md-6 d-none d-md-flex bg-image">
+            <!-- The image half -->
+        </div>
+        <div class="col-md-6">
+            <!--Form-->
+            <div class="body">
+                <div class="register">
+                    <form [formGroup]="form">
+                        <img src="" width=100%>
+                        <h1>Registro</h1>
+                        <h6></h6>
+                        <mat-form-field class="len" appearance="fill">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput formControlName="name" autocomplete="off" placeholder="Ejem. John Doe">
+                            <div *ngIf="getControl.name.touched && getControl.name.invalid" class="text-danger">
+                                <div *ngIf="getControl.name.errors?.minlength">4 letras como mínimo</div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field class="len" appearance="fill">
+                            <mat-label>Correo</mat-label>
+                            <input matInput formControlName="email" autocomplete="off"
+                                placeholder="Ejem. johndoe@mail.com">
+                            <div *ngIf="getControl.email.touched && getControl.email.invalid" class="text-danger">
+                                <div *ngIf="getControl.email.errors?.minlength">8 caracteres como mínimo</div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field class="len" appearance="fill">
+                            <mat-label>Contraseña</mat-label>
+                            <input type="password" matInput formControlName="password" autocomplete="off"
+                                placeholder="Ejem. abC.123*">
+                            <div *ngIf="getControl.password.touched && getControl.password.invalid" class="text-danger">
+                                <div *ngIf="getControl.password.errors?.minlength">8 caracteres como mínimo</div>
+                            </div>
+                        </mat-form-field>
+                        <button class="len hei" mat-raised-button color="primary" (click)="register()"
+                            [disabled]="form.invalid">Registrar</button>
+                    </form>
+                </div>
+            </div>
+            <!--End Form-->
+        </div>
+    </div>
+</div>
