@@ -1,0 +1,38 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */ 
+/*$my-custom-primary: mat-palette($mat-indigo);
+$my-custom-accent: mat-palette($mat-pink, 100, 500, A100);
+$my-custom-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-custom-warn: mat-palette($mat-lime);
+$my-custom-warn: mat-palette($mat-red);*/
+
+//Light theme
+$light-primary: mat-palette($mat-light-blue);
+$light-accent: mat-palette($mat-light-green);
+$light-warn: mat-palette($mat-red);
+
+$chrystal-theme-light: mat-light-theme($light-primary, $light-accent, $light-warn);
+
+@include angular-material-theme($chrystal-theme-light);
+
+.light-theme{
+    @include angular-material-theme($chrystal-theme-light);
+    background: #fff;
+    color: #222;
+}
+
+
+//Dark Theme
+$dark-primary: mat-palette($mat-orange);
+$dark-accent: mat-palette($mat-yellow);
+$dark-warn: mat-palette($mat-lime);
+
+$chrystal-theme-dark: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+.dark-theme-mode{
+    @include angular-material-theme($chrystal-theme-dark);
+background: #222;
+color: #fff;
+
+}

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Soldprod } from '../../models/soldprod';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +26,8 @@ export class DashboardService {
     return this.http.get<any>(this._customersUrl)
   }
 
-  getInventory() {
-    return this.http.get<any>(this._inventoryUrl)
+  getInventory(soldprod: Soldprod) {
+    return this.http.post<any>(this._inventoryUrl, soldprod)
   }
 
 }

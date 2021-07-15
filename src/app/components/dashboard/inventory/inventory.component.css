@@ -1,9 +1,8 @@
 .body{
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 64px)
 }
 
 .inventory{
-    padding-top: 80px;
     width: 100%;
 }

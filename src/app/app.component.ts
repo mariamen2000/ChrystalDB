@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  isDarkTheme: boolean = false;
+
+  ngOnInit() {
+    this.isDarkTheme = localStorage.getItem('theme') === "Dark" ? true : false;
+  }
+
+  storeThemeSelection() {
+    localStorage.setItem('theme', this.isDarkTheme ? "Dark" : "Light");
+
+  }
 }
 
+/*https://www.youtube.com/watch?v=sM3ATKt8568&t=293s*/

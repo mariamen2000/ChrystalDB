@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 //Forms
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -32,6 +33,8 @@ import { ChartsModule } from 'ng2-charts';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatSlideToggleModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     ChartsModule
@@ -46,6 +49,8 @@ import { ChartsModule } from 'ng2-charts';
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatSlideToggleModule,
+    FormsModule,
     ReactiveFormsModule,
     ChartsModule
   ],

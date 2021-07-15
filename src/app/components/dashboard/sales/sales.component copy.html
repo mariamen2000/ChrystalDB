@@ -3,8 +3,8 @@
         <div class="sales">
             <div class="row justify-content-evenly">
                 <div class="col-sm-6 col-md-4">
-                    <div class="card mat-app-background">
-                        <h5 class="card-header">Ventas diarias</h5>
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
                         <div class="card-body">
                             <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
                                 [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
@@ -13,8 +13,8 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
-                    <div class="card mat-app-background">
-                        <h5 class="card-header">Ventas de la semana</h5>
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
                         <div class="card-body">
                             <canvas baseChart [data]="pieChartData" [colors]="colors" [labels]="pieChartLabels"
                                 [options]="pieChartOptions" [chartType]="pieChartType">
@@ -23,8 +23,8 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
-                    <div class="card mat-app-background">
-                        <h5 class="card-header">Utilidad del día</h5>
+                    <div class="card">
+                        <h5 class="card-header">Daily Orders</h5>
                         <div class="card-body">
                             <canvas baseChart [data]="gaugeChartData" [colors]="gaugecolors"
                                 [options]="gaugeChartOptions" [chartType]="gaugeChartType"></canvas>
@@ -34,9 +34,8 @@
                 </div>
                 <div class="row justify-content-evenly">
                     <div class="mt-4 col-12">
-                        <!--<div class="card mat-app-background">-->
-                        <div class="card background: inherit">
-                            <h5 class="card-header">Ventas del mes</h5>
+                        <div class="card">
+                            <h5 class="card-header">Daily Orders</h5>
                             <div class="card-body">
                                 <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
                                     [options]="lineChartOptions" [legend]="lineChartLegend" [colors]="lineChartColors"

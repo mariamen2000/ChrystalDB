@@ -45,7 +45,7 @@ export class SalesComponent implements OnInit {
   public pieChartType: ChartType = 'doughnut';
 
   //gauge Chart
-  public gaugeChartData: any[] = [100, 100];
+  public gaugeChartData: any[] = [40, 160];
   public gaugecolors: any[] = [
     {
       backgroundColor: ['#26547c', '#f5f5f5'],

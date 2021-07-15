@@ -1,16 +1,39 @@
 <div class="container-fluid">
     <div class="body">
         <div class="inventory">
-            <div class="row justify-content-evenly">
-                <div class="col">
-                    <div class="card">
-                        <h5 class="card-header">Productos Vendidos</h5>
-                        <div class="card-body">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2>Productos vendidos últimos 30 días</h2>
+            <table class="table table-inverse table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Marca</th>
+                        <th>Principio</th>
+                        <th>Cant</th>
+                        <th>Stock</th>
+                        <th>Inv (días)</th>
+                        <th>Costo</th>
+                        <th>Impuesto</th>
+                        <th>Total Ventas</th>
+                        <th>Utilidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let soldprod of soldprods">
+                        <td>{{ soldprod.code}}</td>
+                        <td>{{ soldprod.description}}</td>
+                        <td>{{ soldprod.mark}}</td>
+                        <td>{{ soldprod.model}}</td>
+                        <td>{{ soldprod.num}}</td>
+                        <td>{{ soldprod.stock}}</td>
+                        <td>{{ soldprod.days}}</td>
+                        <td>{{ soldprod.cost}}</td>
+                        <td>{{ soldprod.tax}}</td>
+                        <td>{{ soldprod.sales}}</td>
+                        <td>{{ soldprod.utility}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

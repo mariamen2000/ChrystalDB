@@ -1,16 +1,29 @@
 .flex-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-  }
+}
+
+.mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
   
-  .navbar-brand {
+.navbar-brand {
     margin-left: 10px;
-  }
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover, a:active, a:focus{
+    color: lightgray;
+}
   
   .sidenav-container {
     flex: 1 0 auto;
@@ -20,14 +33,13 @@
     margin: 16px;
     width: 250px;
     border-right: none;
-   /* background: #002b5c;
-    color: white;*/
     border-radius: 10px;
+    background-color: turquoise;
     padding: 60px;
     text-align: center;
 }
   
-  .mat-icon{
+.mat-icon{
     padding-top: 4px;
     padding-left: 4px;
     height: 35px !important;
@@ -36,7 +48,7 @@
     color: #99bae2
 }
 
-/*
+
 .sidenav-container mat-nav-list a{
   display: block;
   height: 100%;
@@ -47,10 +59,8 @@
   box-sizing: border-box;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-}*/
-
-/*
-.mat-list-item:hover {
-  padding-left: 50px;
 }
-*/
+
+.mat-list-item:hover {
+  padding-left: 15px;
+}
